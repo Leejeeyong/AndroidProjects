@@ -59,6 +59,8 @@ public class SubActivity extends AppCompatActivity {
         editor.putString(bbbbb,bbbbb);
         editor.commit();
 
+        editor.putString(1+1+"num","123123123");
+
         Log.d("TEST", myPref.getString(aaaaa,"")+"   "+myPref.getString(""+trackinglistNum,""));
 //리스트 갯수
 //리스트갯수 숫자 + 트랙번호문자
@@ -126,6 +128,7 @@ public class SubActivity extends AppCompatActivity {
                         Toast.makeText(getApplicationContext(),items[which]+ selectedCarryNum[0],Toast.LENGTH_LONG).show();
                         CarrierBTN.setText(items[which]);
 
+                        selectedCarryNum[0]=which;
                         switch (which){
                             case 0:
                                 carrier_name[0] ="de.dhl";
@@ -229,6 +232,7 @@ public class SubActivity extends AppCompatActivity {
                     Intent intent = new Intent(getApplicationContext(),MainActivity.class);
                     intent.putExtra("tracknumber",TrackNumberEdit.getText().toString());
                     intent.putExtra("selectname", carrier_name[0]);
+                    intent.putExtra("SelectNum",selectedCarryNum[0]);
                     startActivity(intent);
                 }
         }});

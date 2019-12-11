@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
         final TextView status_view = (TextView)findViewById(R.id.status_view);
         final TextView from_view = (TextView)findViewById(R.id.from_view);
         final TextView to_view = (TextView)findViewById(R.id.to_View);
-        final int selectedCarryNum = 7;
+        //final int selectedCarryNum = 7;
 
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl("https://apis.tracker.delivery")
@@ -58,6 +58,7 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = getIntent();
         tracknumberedit.setText(intent.getStringExtra("tracknumber"));
         carrier_name[0]=intent.getStringExtra("selectname");
+        final int selectedCarryNum=intent.getIntExtra("SelectNum",7);
 
         ////////////////////택배사
         Call<List<Data>> dataCarriers = retroService.getCarriers();
