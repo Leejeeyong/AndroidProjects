@@ -39,6 +39,14 @@ public class MainActivity extends AppCompatActivity {
 
                 Data user = response.body();
 
+                Log.d("TEST",user.getId());
+                Log.d("TEST",user.getName());
+                Log.d("TEST",user.getTel());
+
+                for(int i = 0; i < user.progress.size();i++){
+                    
+                }
+
             }
 
             @Override
