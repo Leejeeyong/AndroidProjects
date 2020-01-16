@@ -31,14 +31,19 @@ public class SubActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.trackinglist);
 
-        /*
+
         Realm.init(this);
 
         Realm realm = Realm.getDefaultInstance();
 
         final LocalDB myDB = new LocalDB();
         Log.d("REALM TEST",""+realm.getPath());
-        */
+        myDB.setDB(0,"test0","kr.epost", "0000");
+        //myDB.setDB(1,"test1","kr.epost", "1111");
+
+        Log.d("REALM TEST",""+myDB.getTracknum());
+
+
 
         final Button CarrierBTN = (Button)findViewById(R.id.carrierselectbtn);
         Button TrackingBTN = (Button)findViewById(R.id.trackingbtn);

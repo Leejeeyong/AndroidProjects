@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
                 Log.d("TEST",user.getTel());
 
                 for(int i = 0; i < user.progress.size();i++){
-                    
+
                 }
 
             }

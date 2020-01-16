@@ -9,6 +9,13 @@ public class LocalDB extends RealmObject {
     private String carrier;
     private String track_number;
 
+    public void setDB(int num, String title, String carrier, String track_number){
+        this.num = num;
+        this.title=title;
+        this.carrier=carrier;
+        this.track_number=track_number;
+    }
+
 
     public int getNum(){return num;}
     public void setNum(int num){this.num = num;}
